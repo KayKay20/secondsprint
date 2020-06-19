@@ -110,3 +110,29 @@ function small(value){
 	value.style.height = "200px";
 }
 
+function changeColor1(){
+	var color = document.getElementById("navbar");
+	color.style.backgroundColor = "Blue";
+}
+
+function changeColor2(){
+	var color = document.getElementById("navbar");
+	color.style.backgroundColor = "Green";
+}
+
+function changeColor3(){
+	var color = document.getElementById("navbar");
+	color.style.backgroundColor = "Orange";
+}
+
+function changeColor4(){
+	var color = document.getElementById("navbar");
+	color.style.backgroundColor = "Red";
+}
+
+
+
+
+
+
+
