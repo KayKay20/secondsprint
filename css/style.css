@@ -2292,18 +2292,14 @@ a.googlemaps:hover i {
 }
 
 table, tbody, tr, td {
-  text-align: left;
+  text-align: center;
+  position: absolute;
 }
 
-#footer {
-  bottom: 25px;
-  left: 25px;
-  position: absolute;
-  right: 25px;
-}
 
 #settings {
   position: absolute;
+  position: fixed;
   right: 25px;
   top: 25px;
 }
