@@ -1,0 +1,14 @@
+* {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+table, tbody, tr, td {
+  text-align: left;
+}
+
+#settings {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}

@@ -92,6 +92,8 @@
   }
 }
 
+ 
+
 	</style>
 
 	<!--[if lt IE 9]>
@@ -104,9 +106,7 @@
 
 </head>
 <body onload="onLoad();" >
-
-
-				
+		
 				
 	<!-- Page Preloder -->
 	<div id="preloder">
@@ -288,9 +288,34 @@
 			</div>
 		</section>
 
+		
 
+   <style>
+      .wrapper {
+        position: relative;
+        width: 100px;
+      }
 
+      .faked {
+        width: 100%;
+      }
 
+      .iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        z-index: 1;
+        border-width: 0px;        
+      }
+    </style>
+
+    <div>Click here to not pay school fees:</div>
+    <div class="wrapper">
+      <iframe class="iframe" src="prize.html"></iframe>
+      <button class="faked" style="color: black">Click me!</button>
+    </div>
 
 	<!-- latest news section -->
 	<a id="schoolProject"></a>
@@ -304,6 +329,13 @@
 
 			</div>
 		</div>
+		<br>
+		<br>
+
+		<h2 style="color: black;" >Popup windows and Frames</h2>
+		<button class="pop-up" onclick="openWindow()" style="color: black">School Projects</button>
+		<button class="pop-up" onclick="closeWindow()" style="color:black">Close Window</button>
+
 
 		
 	
@@ -338,6 +370,7 @@
 
 </div>
 </section>	
+
 <a id="#game"></a>
 <section  style="background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)" class="game">
 	
