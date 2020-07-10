@@ -65,38 +65,38 @@ document.form1.onsubmit = function(e){
 	}
 }
 
-//slider
-let images = [
-    'pics/1.jpg',
-    'pics/2.jpg',
-    'pics/3.jpg',
-    'pics/4.jpg',
-    'pics/5.jpg',
-    'pics/6.jpg',
-    'pics/7.jpg',
-    'pics/8.jpg',
-    'pics/9.jpg',
-    'pics/10.jpg',
-    'pics/11.jpg',
-    'pics/12.jpg',
-    'pics/13.jpg',
-    'pics/14.jpg',
-    'pics/15.jpg',
-    'pics/16.jpg',
-    'pics/17.jpg'
-	];
+// //slider
+// let images = [
+//     'pics/1.jpg',
+//     'pics/2.jpg',
+//     'pics/3.jpg',
+//     'pics/4.jpg',
+//     'pics/5.jpg',
+//     'pics/6.jpg',
+//     'pics/7.jpg',
+//     'pics/8.jpg',
+//     'pics/9.jpg',
+//     'pics/10.jpg',
+//     'pics/11.jpg',
+//     'pics/12.jpg',
+//     'pics/13.jpg',
+//     'pics/14.jpg',
+//     'pics/15.jpg',
+//     'pics/16.jpg',
+//     'pics/17.jpg'
+// 	];
 
-let i = 0;
-   function changeImage(){
-        if (i < images.length) {
-            document.getElementById("slider").src = images[i] 
-            i += 1;
-        }
-        else if(i >= images.length) {
-            i = 1;
-        }
-    }
-    setInterval(function(){ changeImage(); }, 3000);
+// let i = 0;
+//    function changeImage(){
+//         if (i < images.length) {
+//             document.getElementById("slider").src = images[i] 
+//             i += 1;
+//         }
+//         else if(i >= images.length) {
+//             i = 1;
+//         }
+//     }
+//     setInterval(function(){ changeImage(); }, 3000);
 
 
 function big( value){
@@ -139,7 +139,16 @@ function openWindow(){
 	newWindow = window.open('https://prepr.org/covid-19/?gclid=CjwKCAjwi_b3BRAGEiwAemPNU0vLtQAYJtp6SZNIjzD9p1yFiqpi7Djhy06JcSu9rsKABS4l8G7svBoC1wEQAvD_BwE', 
 		'_blank', 'width=800,height=500,top=500,left=200,toolbar=no,resizable=no');
 
+
 }
+
+// function anotherbutton(){
+	// newWindow.resizeBy(0,0);
+// 	newWindow.resizeTo(200,900);
+
+
+
+// }
 
 function closeWindow(){
 	 newWindow.close();
@@ -166,3 +175,29 @@ window.addEventListener('storage', function(event){
 });
 
 localStorage.setItem('a', 'b');
+
+// fetch api function
+fetch('https://api.thecatapi.com/v1/images/search')
+.then(res => res.json())
+.then(function(data){
+	document.getElementById('picture').src = data[0].url;
+	document.getElementById('heading').innerHTML = data[0].breeds[0].name;
+	
+});
+
+function refresh(){
+	fetch('https://api.thecatapi.com/v1/images/search')
+	.then(res => res.json())
+	.then(function(data){
+		document.getElementById('picture').src = data[0].url;
+
+	});
+}
+
+formElem.onsubmit = async (e) => {
+	e.preventDefault();
+
+	console.log( new FormData(formElem));
+	
+};
+
