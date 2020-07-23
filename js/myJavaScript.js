@@ -65,38 +65,38 @@ document.form1.onsubmit = function(e){
 	}
 }
 
-// //slider
-// let images = [
-//     'pics/1.jpg',
-//     'pics/2.jpg',
-//     'pics/3.jpg',
-//     'pics/4.jpg',
-//     'pics/5.jpg',
-//     'pics/6.jpg',
-//     'pics/7.jpg',
-//     'pics/8.jpg',
-//     'pics/9.jpg',
-//     'pics/10.jpg',
-//     'pics/11.jpg',
-//     'pics/12.jpg',
-//     'pics/13.jpg',
-//     'pics/14.jpg',
-//     'pics/15.jpg',
-//     'pics/16.jpg',
-//     'pics/17.jpg'
-// 	];
+//slider
+let images = [
+    'pics/1.jpg',
+    'pics/2.jpg',
+    'pics/3.jpg',
+    'pics/4.jpg',
+    'pics/5.jpg',
+    'pics/6.jpg',
+    'pics/7.jpg',
+    'pics/8.jpg',
+    'pics/9.jpg',
+    'pics/10.jpg',
+    'pics/11.jpg',
+    'pics/12.jpg',
+    'pics/13.jpg',
+    'pics/14.jpg',
+    'pics/15.jpg',
+    'pics/16.jpg',
+    'pics/17.jpg'
+	];
 
-// let i = 0;
-//    function changeImage(){
-//         if (i < images.length) {
-//             document.getElementById("slider").src = images[i] 
-//             i += 1;
-//         }
-//         else if(i >= images.length) {
-//             i = 1;
-//         }
-//     }
-//     setInterval(function(){ changeImage(); }, 3000);
+let i = 0;
+   function changeImage(){
+        if (i < images.length) {
+            document.getElementById("slider").src = images[i] 
+            i += 1;
+        }
+        else if(i >= images.length) {
+            i = 1;
+        }
+    }
+    setInterval(function(){ changeImage(); }, 3000);
 
 
 function big( value){
